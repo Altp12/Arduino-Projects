@@ -28,7 +28,7 @@ Sketch and upload code to Arduino board
  ```
  - Other
 
- Please refer to this [page](https://www.arduino.cc/en/Guide/Linux) to install	
+   Please refer to this [page](https://www.arduino.cc/en/Guide/Linux) to install	
 
 #### Windows
  Please refer to this [page](https://www.arduino.cc/en/Guide/Windows) to install
