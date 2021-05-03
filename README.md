@@ -28,12 +28,12 @@ Sketch and upload code to Arduino board
  ```
  - Other
 
- Please refer to this [page](https://www.arduino.cc/en/Guide/Linux)	
+ Please refer to this [page](https://www.arduino.cc/en/Guide/Linux) to install	
 
 #### Windows
- Please refer to this [page](https://www.arduino.cc/en/Guide/Windows)
+ Please refer to this [page](https://www.arduino.cc/en/Guide/Windows) to install
 #### MacOS
- Please refer to this [page](https://www.arduino.cc/en/guide/macOSX)
+ Please refer to this [page](https://www.arduino.cc/en/guide/macOSX) to install
 
 ### Fritzing
 
@@ -68,4 +68,4 @@ CAD software to design the project scheme
 You can download it on https://fritzing.org/download/ by paying or refer to this [Wiki](https://github.com/fritzing/fritzing-app/wiki/1.-Building-Fritzing) to build from the source
 
 ### Mac OS
-You also can download it on https://fritzing.org/download/ by paying or refer to this [Wiki](https://github.com/fritzing/fritzing-app/wi	ki/1.1-Mac-notes) to build from the source
+You also can download it on https://fritzing.org/download/ by paying or refer to this [Wiki](https://github.com/fritzing/fritzing-app/wiki/1.1-Mac-notes) to build from the source
