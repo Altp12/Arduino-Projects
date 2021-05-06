@@ -1,4 +1,4 @@
-/*I2C_scanner
+  /*I2C_scanner
   This sketch tests standard 7-bit addresses.
   Devices with higher bit address might not be seen properly.*/
   
@@ -14,32 +14,30 @@ void setup() {
 
 void loop() {
   byte error, address;
-  int nDevices;
+  int Devices;
 
   Serial.println("Scanning...");
 
-  nDevices = 0;
+  Devices = 0;
   for (address = 1; address < 127; address++ ) {
     Wire.beginTransmission(address);
     error = Wire.endTransmission();
 
     if (error == 0) {
       Serial.print("I2C device found at address 0x");
-      if (address < 16)
-        Serial.print("0");
+      if (address < 16) Serial.print("0");
       Serial.print(address, HEX);
       Serial.println("  !");
 
-      nDevices++;
+      Devices++;
     }
     else if (error == 4) {
       Serial.print("Unknown error at address 0x");
-      if (address < 16)
-        Serial.print("0");
+      if (address < 16) Serial.print("0");
       Serial.println(address, HEX);
     }
   }
-  if (nDevices == 0)
+  if (Devices == 0)
     Serial.println("No I2C devices found\n");
   else
     Serial.println("done\n");
