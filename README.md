@@ -4,7 +4,7 @@
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/lyfetech/Arduino-Projects?style=flat-square)
 ![License](https://img.shields.io/github/license/lyfetech/Arduino-Projects?style=flat-square)
 
-My Arduino projects that already tested and implemented
+My Arduino projects that still in testing or not yet implemented
 
 ## Software Used & Installation
 ### Arduino IDE 
