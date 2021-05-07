@@ -1,5 +1,5 @@
 # Arduino-Projects (testing)
-![GitHub last commit (branch)](https://img.shields.io/github/last-commit/lyfetech/Arduino-Projects/main?style=flat-square)
+![GitHub last commit (branch)](https://img.shields.io/github/last-commit/lyfetech/Arduino-Projects/testing?style=flat-square)
 ![GitHub repo size](https://img.shields.io/github/repo-size/lyfetech/Arduino-Projects?style=flat-square)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/lyfetech/Arduino-Projects?style=flat-square)
 ![License](https://img.shields.io/github/license/lyfetech/Arduino-Projects?style=flat-square)
