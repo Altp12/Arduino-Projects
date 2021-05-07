@@ -67,11 +67,11 @@ void setup()
 void loop()
 {
   //Choose Airbus/Boeing beacon light (default : Airbus)
-  //Airbus_beacon();
-  Boeing_beacon(); 
+  Airbus_beacon();
+  //Boeing_beacon(); 
   //Choose Airbus or Boeing Strobe (default : Airbus)
-  //Airbus_strobe();
-  Boeing_strobe();
+  Airbus_strobe();
+  //Boeing_strobe();
 }
 
 void Airbus_beacon()
