@@ -3,13 +3,14 @@
  *  This code includes 3 projects
  *  1. Turn LED on and off sequentially
  *  2. Aircraft lighting system simulation
- *  3. Race system light
+ *  3. Race light system
  *  Uncomment one of the code below (default : Turn LED on and off sequentially)
  */
 
 
 //1. Turn LED on and off sequentially
-//define LED pin 
+//define LED pin
+
 #define LED_RED 10
 #define LED_YELLOW 9
 #define LED_GREEN 6
@@ -211,5 +212,64 @@ void yellow_flash()
     digitalWrite(YELLOW, LOW);
     delay(1000);
   }  
+}
+*/
+
+
+//BONUS. This is code for LED fading, use scheme like Race light system but only use some LED light with pin that supports PWM
+/*
+#define RED1 2
+#define RED2 3
+#define RED3 4
+#define RED4 5
+#define RED5 6
+#define GREEN1 7
+#define GREEN2 8
+#define GREEN3 9
+#define GREEN4 10
+#define GREEN5 11
+#define YELLOW 12
+
+void setup()
+{
+  pinMode(RED1, OUTPUT);
+  pinMode(RED2, OUTPUT);
+  pinMode(RED3, OUTPUT);
+  pinMode(RED4, OUTPUT);
+  pinMode(RED5, OUTPUT);
+  pinMode(GREEN1, OUTPUT);
+  pinMode(GREEN2, OUTPUT);
+  pinMode(GREEN3, OUTPUT);
+  pinMode(GREEN4, OUTPUT);
+  pinMode(GREEN5, OUTPUT);
+  pinMode(YELLOW, OUTPUT); 
+}
+
+void loop()
+{
+  fadein();
+  delay(100);
+  fadeout();
+  delay(100);
+}
+
+void fadein()
+{
+  for(int j=0;j<256;j++)
+  {
+    analogWrite(RED2, j);
+    analogWrite(GREEN3, j);
+    delay(10);
+  } 
+}
+
+void fadeout()
+{
+  for(int j=255;j>=0;j--)
+  {
+    analogWrite(RED2, j);
+    analogWrite(GREEN3, j);
+    delay(10);
+  }
 }
 */
