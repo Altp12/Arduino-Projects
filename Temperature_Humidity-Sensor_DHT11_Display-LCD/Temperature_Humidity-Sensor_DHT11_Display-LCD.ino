@@ -19,27 +19,57 @@ void setup() {
   dht.begin();  //Setup DHT sensor
    
   lcd.setCursor(0,0); //Set the lcd cursor to (0,0)
-  lcd.print("DHT sensor");  //Print text
+  lcd.print("DHT 11 sensor");  //Print text
   lcd.setCursor(0,1); //Set the lcd cursor to (0,1)
-  lcd.print("Temperature : ");  //Print text
+  lcd.print("Temperature :");  //Print text
   lcd.setCursor(0,2); //Set the lcd cursor to (0,2)
-  lcd.print("Humidity : "); //Print text
+  lcd.print("Humidity :"); //Print text
 }
 
 float temp; //variable assign to temperature read
-int humid;  //variable assign to humidity read
+float humid;  //variable assign to humidity read
 
 void loop() {
-  temp = dht.readTemperature(); //Read the temperature as Celcius
-  
+  celcius();
   //Uncomment line below to show the temperature as Fahrenheit
-  //temp = dht.convertCtoF(temp); //Convert temperature to Fahrenheit
-  
-  humid = dht.readHumidity(); //Read the humidity as percentage(%)
-  lcd.setCursor(15,1);  //Set cursor to (15,1)
-  lcd.print(temp,2); //Print temperature with 2 decimals digit
-  lcd.print("\xc2\xb0C"); //Print °C using UTF-8 character encoding 
-  lcd.setCursor(12,2);  //Set cursor to (12,2)
-  lcd.print(humid);  //Print humidity
-  lcd.print("%"); 
+  //fahrenheit();
+  //Uncomment line below to show the temperature as Kelvin
+  //kelvin();
+  humidity();
+}
+
+void celcius()
+{
+  temp = dht.readTemperature(); //Read the temperature as Celcius
+  lcd.setCursor(14,1);  //Set cursor to (14,1)
+  lcd.print(temp,1); //Print temperature with 1 decimal digit
+  lcd.print((char)223); //Print °
+  lcd.print("C"); //Print C
+}
+
+void fahrenheit()
+{
+  temp = dht.readTemperature(); //Read the temperature as Celcius
+  temp = dht.convertCtoF(temp); //Convert Celcius to Fahrenheit
+  lcd.setCursor(14,1);  //Set cursor to (14,1)
+  lcd.print(temp,1); //Print temperature with 1 decimal digit
+  lcd.print((char)223); //Print °
+  lcd.print("F"); //Print F
+}
+
+void kelvin()
+{
+  temp = dht.readTemperature(); //Read the temperature as Celcius
+  temp+=273.15; //convert Celcius to Kelvin 
+  lcd.setCursor(14,1);  //Set cursor to (14,1)
+  lcd.print(temp,1);  //Print temperature with 1 decimal digit
+  lcd.print("K"); //Print K
+}
+
+void humidity()
+{
+  humid = dht.readHumidity(); //Read the humidity as percentage(%) 
+  lcd.setCursor(11,2);  //Set cursor to (11,2)
+  lcd.print(humid,1);  //Print humidity with 1 decimal digit
+  lcd.print("%"); //Print % sign
 }
