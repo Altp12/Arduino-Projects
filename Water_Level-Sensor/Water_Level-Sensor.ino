@@ -14,7 +14,7 @@ bool state = false; //State the condition of led
 
 void setup()
 {
- Serial.begin(96s00);
+ Serial.begin(9600);
  pinMode(LED, OUTPUT);
  pinMode(Power_Sensor, OUTPUT);
 }
