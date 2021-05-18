@@ -24,21 +24,21 @@ void setup()
   lcd.setCursor(0,0);
   lcd.print("lm35 sensor");
   lcd.setCursor(0,1);
-  lcd.print("Temp : ");
+  lcd.print("Temp in C : ");
   lcd.setCursor(0,2);
-  lcd.print("Temp : ");
+  lcd.print("Temp in F : ");
   lcd.setCursor(0,3);
-  lcd.print("Temp : ");
+  lcd.print("Temp in K : ");
 }
 
 void loop() 
 {
   lm35input = analogRead(lm35Pin);  //Read the analog input
-  lcd.setCursor(7,1);
+  lcd.setCursor(12,1);
   tempPrintC();
-  lcd.setCursor(7,2);
+  lcd.setCursor(12,2);
   tempPrintF();
-  lcd.setCursor(7,3);
+  lcd.setCursor(12,3);
   tempPrintK();
   delay(1000);
 }
