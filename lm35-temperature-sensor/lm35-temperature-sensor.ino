@@ -45,7 +45,7 @@ void loop()
 
 void tempRead()
 {
-  Vout = (lm35input*(5000.0/1024.0)); //Calculate the sensor voltage input
+  Vout = (lm35input*(Vref/1024.0)); //Calculate the sensor voltage input
   Ctemp = Vout/10;
   Ftemp = Ctemp*(9/5) + 32;
   Ktemp = Ctemp+273.15;
